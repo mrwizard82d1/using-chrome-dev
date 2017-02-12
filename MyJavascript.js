@@ -1,3 +1,6 @@
+var step = 1;
+var thing = "ants";
+
 doStuff = function() {
 	console.group("Steps");
 	firstStep();
@@ -5,26 +8,27 @@ doStuff = function() {
 	thirdStep();
 	console.groupEnd();
 
-	console.group("Finishing part");
+	// %c applies a style to the resulting text
+	console.group("%cFinishing part", "font-size: x-large");
 	loadBanners();
 	soundTrumpets();
 	console.groupEnd();
 }
 
 firstStep = function() {
-	console.group("firstStep");
-	console.log("Finding ants");
-	console.log("Building ant farms");
-	console.log("Feeding ants");
+	console.group("step %i", step++);
+	console.log("Finding %s", thing);
+	console.log("Building %s farms", thing.slice(0, -1));
+	console.log("Feeding %s", thing);
 	console.groupEnd();
 }
 
 secondStep = function() {
-	console.log("secondStep");
+	console.log("step %i", step++);
 }
 
 thirdStep = function() {
-	console.log("thirdStep");
+	console.log("step %i", step++);
 }
 
 loadBanners = function() {
