@@ -13,6 +13,12 @@ doStuff = function() {
 	loadBanners();
 	soundTrumpets();
 	console.groupEnd();
+
+	console.log("The document as HTML");
+	console.log(document);
+
+	console.log("The document as JSON");
+	console.dir(document);
 }
 
 firstStep = function() {
