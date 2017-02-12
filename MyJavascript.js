@@ -1,9 +1,37 @@
 doStuff = function() {
-    console.log("hi");
-    console.warn("uh oh");
-    console.error("it broke!");
-    console.debug("Squish, squish"); // Debug output
-    console.info("Informative, isn't it"); // information
-    console.assert(10 == 2 * 5); // an assert passes
-    console.assert(2 + 2 == 5); // failing assertion logs an error
+	console.group("Steps");
+	firstStep();
+	secondStep();
+	thirdStep();
+	console.groupEnd();
+
+	console.group("Finishing part");
+	loadBanners();
+	soundTrumpets();
+	console.groupEnd();
 }
+
+firstStep = function() {
+	console.group("firstStep");
+	console.log("Finding ants");
+	console.log("Building ant farms");
+	console.log("Feeding ants");
+	console.groupEnd();
+}
+
+secondStep = function() {
+	console.log("secondStep");
+}
+
+thirdStep = function() {
+	console.log("thirdStep");
+}
+
+loadBanners = function() {
+	console.log("loadBanners");
+}
+
+soundTrumpets = function() {
+	console.log("soundTrumpets");
+}
+
